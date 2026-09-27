@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trivat Tour - Paket Tour China Terpercaya</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo"><img src="trivat.jpg" style="height:40px; border-radius:4px;"></div>
+  <button id="menuBtn" class="hamburger">☰</button>
+  <div class="nav-links" id="navMenu">
+    <a href="#">Beranda</a>
+    <a href="#paket">Paket</a>
+    <a href="https://wa.me/628123456789">Hubungi Kami</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div>
+    <h2>explore </h2>
+    <h1>CHINA</h1>
+    <p>Spesialis perjalanan tak terlupakan ke Tiongkok, dari Tembok Besar hingga kota metropolitan modern. Aman, nyaman, terpercaya.</p>
+    <a class="btn" href="#paket">Lihat Paket Terbaik</a>
+  </div>
+</div>
+
+<div id="paket" class="paket-container">
+  <h2 class="judul-paket">DESTINATION</h2>
+  <div class="paket-list">
+    <div class="card">
+      <img src="beijing.jpg">
+      <h3>Beijing + Great Wall 4D3N</h3>
+      <p>Termasuk Hotel, Makan, Guide</p>
+      <b>Rp 8.500.000</b>
+      <a class="btn-card" href="https://wa.me/628123456789?text=Halo%20Trivat%20Tour,%20saya%20mau%20tanya%20Paket%20Beijing">Booking WA</a>
+    </div>
+    <div class="card">
+      <img src="shanghai.jpg">
+      <h3>Shanghai - Disneyland 5D4N</h3>
+      <p>Tour + Disneyland Ticket</p>
+      <b>Rp 12.000.000</b>
+      <a class="btn-card" href="https://wa.me/628123456789?text=Halo%20Trivat%20Tour,%20saya%20mau%20tanya%20Paket%20Shanghai">Booking WA</a>
+    </div>
+    <div class="card">
+      <img src="zhangjiajie.jpg">
+      <h3>Zhangjiajie Avatar 6D5N</h3>
+      <p>Eksplor Gunung Avatar</p>
+      <b>Rp 15.500.000</b>
+      <a class="btn-card" href="https://wa.me/628123456789?text=Halo%20Trivat%20Tour,%20saya%20mau%20tanya%20Paket%20Zhangjiajie">Booking WA</a>
+    </div>
+  </div>
+</div>
+
+<script>
+let target = 0;
+let current = 0;
+const hero = document.querySelector('.hero');
+window.addEventListener('scroll', function() { target = window.scrollY * 0.5; });
+function smoothParallax() {
+  current += (target - current) * 0.05;
+  hero.style.backgroundPositionY = current + 'px';
+  requestAnimationFrame(smoothParallax);
+}
+smoothParallax();
+
+// HAMBURGER CLICK
+document.getElementById('menuBtn').onclick = function(){
+  document.getElementById('navMenu').classList.toggle('show');
+}
+</script>
+</body>
+</html>
